@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Telegram Account Seller | Fast & Secure Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #060913;
+            --card-bg: rgba(14, 21, 37, 0.75);
+            --border: rgba(212, 175, 55, 0.25);
+            --primary: #0088cc;
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --primary-glow: rgba(0, 136, 204, 0.45);
+            --green: #10b981;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 16px;
+            background-image: 
+                radial-gradient(circle at top, rgba(0, 136, 204, 0.2), transparent 50%),
+                radial-gradient(circle at bottom, rgba(212, 175, 55, 0.12), transparent 50%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: auto 0;
+        }
+
+        /* HERO & LOGO */
+        .hero {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #d4af37, #0088cc, #f3e5ab);
+            box-shadow: 0 0 30px var(--gold-glow);
+            animation: pulse-gold 2.5s infinite;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #09101f;
+        }
+
+        @keyframes pulse-gold {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 25px var(--gold-glow); }
+            50% { transform: scale(1.03); box-shadow: 0 0 40px var(--primary-glow); }
+        }
+
+        .badge-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        p.subtitle {
+            font-size: 13.5px;
+            color: var(--text-sub);
+            line-height: 1.5;
+        }
+
+        /* MAIN DIRECT BOT CTA BUTTON */
+        .btn-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #0088cc 0%, #005580 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 800;
+            box-shadow: 0 8px 25px var(--primary-glow);
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-main:active {
+            transform: scale(0.98);
+        }
+
+        .btn-main::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            100% { left: 140%; }
+        }
+
+        /* FEATURES */
+        .features {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .feat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .feat-icon {
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* LIVE STOCK PREVIEW */
+        .stock-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .stock-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stock-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stock-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 16, 30, 0.7);
+            padding: 10px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .price-badge {
+            background: rgba(0, 136, 204, 0.15);
+            color: #38bdf8;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(0, 136, 204, 0.3);
+        }
+
+        /* PROOFS LINK */
+        .proof-link {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .proof-link a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="badge-live">
+            <span class="badge-dot"></span> 24/7 Live Accounts & OTP Active
+        </div>
+
+        <!-- LOGO -->
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Telegram Account Seller Logo" onerror="this.src='https://telegram.org/img/t_logo.png'">
+        </div>
+
+        <h1>TELEGRAM ACCOUNT SELLER</h1>
+        <p class="subtitle">100% Fresh, Aged & Spam Tag Accounts with <b>Instant 2FA & Auto Live OTP Delivery</b>.</p>
+    </div>
+
+    <!-- MAIN DIRECT BOT BUTTON -->
+    <a href="https://t.me/MAINTGGOTPBOT?start=promo" class="btn-main">
+        <span>🚀 OPEN BOT IN TELEGRAM</span>
+    </a>
+
+    <!-- FEATURES -->
+    <div class="features">
+        <div class="feat-item">
+            <span class="feat-icon">⚡</span>
+            <span>Instant Delivery (2s)</span>
+        </div>
+        <div class="feat-item">
+            <span class="feat-icon">🔑</span>
+            <span>Live Auto OTP</span>
+        </div>
+        <div class="feat-item">
+            <span class="feat-icon">🛡️</span>
+            <span>2FA Passwords</span>
+        </div>
+        <div class="feat-item">
+            <span class="feat-icon">💳</span>
+            <span>UPI & Stars Pay</span>
+        </div>
+    </div>
+
+    <!-- LIVE STOCK PREVIEW -->
+    <div class="stock-box">
+        <div class="stock-title">
+            <span>🔥 Available Countries</span>
+            <span style="color: #34d399;">● In Stock</span>
+        </div>
+        <div class="stock-list">
+            <div class="stock-row">
+                <span>🇮🇳 India (Permanent / Spam)</span>
+                <span class="price-badge">₹30.0</span>
+            </div>
+            <div class="stock-row">
+                <span>🇺🇸 USA / Canada (Fresh)</span>
+                <span class="price-badge">₹35.0</span>
+            </div>
+            <div class="stock-row">
+                <span>🇩🇪 Germany 2023 (Aged)</span>
+                <span class="price-badge">₹150.0</span>
+            </div>
+            <div class="stock-row">
+                <span>🇸🇦 Saudi Arabia (Scam Tag)</span>
+                <span class="price-badge">₹200.0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECONDARY DIRECT BOT CTA -->
+    <a href="https://t.me/MAINTGGOTPBOT?start=promo_buy" class="btn-main" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);">
+        <span>🛍️ BUY ACCOUNT NOW</span>
+    </a>
+
+    <!-- LIVE PROOFS CHANNEL LINK -->
+    <div class="proof-link">
+        Looking for live purchase proofs? <br>
+        <a href="https://t.me/ACCOUNTSELLERBOTPROFFS" target="_blank">👉 View Live Proofs Channel</a>
+    </div>
+
+    <div class="footer-note">
+        ⚡ Guaranteed delivery via Telegram X. Powered by @MAINTGGOTPBOT
+    </div>
+
+</div>
+
+</body>
+</html>
